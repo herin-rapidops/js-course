@@ -26,10 +26,6 @@ document.write("Last "+que1+" elements: "+lastN(static_array1,que1)+"<br>");
 document.write("<br><br><strong>Question 2</strong><br><br>");
 let que2 = prompt("Enter a number to add '-' between two even numbers");
 
-// setTimeout(() => {
-// 	que2 = prompt("Enter a number:");
-// },0);
-
 let evenDash = number => {
 	let str = number.toString();
 	let res = [str[0]];
@@ -190,7 +186,7 @@ document.write("<br><br><strong>Question 7</strong><br><br>");
 
 let monthArray = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-let date = prompt("Enter date in '-' format or '/' format");
+let date = prompt("Enter date in '-' format or '/' format in 'DD/MM/YYYY' format");
 
 document.write("Date: "+date+"<br><br>");
 
@@ -231,8 +227,8 @@ let diffDate = (date1,date2) => {
 		diffDays = diffDays % 365;
 	}
 	if(diffDays>=12) {
-		diffMonth = Math.floor(diffDays/12);
-		diffDays = diffDays % 12;
+		diffMonth = Math.floor(diffDays/30);
+		diffDays = diffDays % 30;
 	}
 	
 
@@ -291,18 +287,18 @@ document.write("Differece of date1 and date2 is: <br>"+detailedDiff(d1,d2)+"<br>
 
 document.write("<br><br><strong>Question 11</strong><br><br>");
 
-let static_string = "This is a sample string";
+let static_string11 = "This is a sample string";
 
-document.write("String: "+d1+"<br><br>");
+document.write("String: "+static_string11+"<br><br>");
 
-let newString = prompt("Enter string to enter between: "+static_string);
+let newString = prompt("Enter string to enter between: "+static_string11);
 let position = prompt("Enter position:");
 
 let insertString = (a,b,position) => [a.slice(0, position), b, a.slice(position)].join('');
 
 document.write("Output:<br>");
 
-document.write("After insertion: "+insertString(static_string,newString,position)+"<br>");
+document.write("After insertion: "+insertString(static_string11,newString,position)+"<br>");
 
 // question 12
 
